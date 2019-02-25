@@ -22,6 +22,3 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglis
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
-
-// https://developers.google.com/books/
-// https://books.google.com/
