@@ -5,8 +5,10 @@ const bookSchema = new Schema({
   title: { type: String, required: true },
   author: { type: String, required: true },
   synopsis: String,
-  date: { type: Date, default: Date.now }
+// need to add image and link 
+  url: { type: String, required: true }
 });
+
 
 const Book = mongoose.model("Book", bookSchema);
 
