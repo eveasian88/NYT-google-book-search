@@ -8,7 +8,6 @@ import { Grid } from "semantic-ui-react";
 
 // import Books from "./pages/Books";
 // import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
 
 
 class App extends React.Component {
@@ -29,7 +28,7 @@ class App extends React.Component {
             <Route path="/saved" component={Saved} />
             {/* <Route path="/books" component={Books} />
             <Route path="/books/:id" component={Detail} /> */}
-            <Route component={NoMatch} />
+          
           </Switch>
           </Grid.Column>
           </Grid.Row>
