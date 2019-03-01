@@ -1,8 +1,7 @@
 import React from "react";
-import { Segment } from "semantic-ui-react";
+import { Segment, Form } from "semantic-ui-react";
 
 class SearchResults extends React.Component {
-
     state={
         term: "",
     }
@@ -10,7 +9,9 @@ class SearchResults extends React.Component {
     render() {
         return (
             <Segment>
+                <Form.Field>
                 Search Results
+                </Form.Field>
             </Segment>
         )
     }

@@ -1,6 +1,22 @@
 import React from "react";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
+import { Container, Segment, Grid, Form } from "semantic-ui-react";
+
+/**
+ * COMPONENT PURPOSE
+ * 
+ * to act as the page layout and render components
+ * in an arranged manner using the Semantic Grid.
+ * 
+ * This page should have a row on top with an input to serve 
+ * the search bar so a user may search the api for books.
+ * 
+ * The bottom row should display the search results IF there are any.
+ * 
+ * FORM
+ */
+
 
 class Books extends React.Component {
   state = {
@@ -51,42 +67,17 @@ class Books extends React.Component {
   render() {
     return (
       <Container fluid>
-        <Row>
-          <Col size="md-6">
-            <Jumbotron>
+        <Grid.Row>
+          <Grid.Column size="md-6">
+            <Segment>
               <h1>What Books Should I Read?</h1>
-            </Jumbotron>
-            <form>
-              <Input
-                value={this.state.title}
-                onChange={this.handleInputChange}
-                name="title"
-                placeholder="Title (required)"
-              />
-              <Input
-                value={this.state.author}
-                onChange={this.handleInputChange}
-                name="author"
-                placeholder="Author (required)"
-              />
-              <TextArea
-                value={this.state.synopsis}
-                onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
-              />
-              <FormBtn
-                disabled={!(this.state.author && this.state.title)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit Book
-              </FormBtn>
-            </form>
-          </Col>
-          <Col size="md-6 sm-12">
-            <Jumbotron>
+            </Segment>
+            
+          </Grid.Column>
+          <Grid.Column size="md-6 sm-12">
+            <Segment>
               <h1>Books On My List</h1>
-            </Jumbotron>
+            </Segment>
             {this.state.books.length ? (
               <List>
                 {this.state.books.map(book => (
@@ -103,8 +94,8 @@ class Books extends React.Component {
             ) : (
               <h3>No Results to Display</h3>
             )}
-          </Col>
-        </Row>
+          </Grid.Column>
+        </Grid.Row>
       </Container>
     );
   }
