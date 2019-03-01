@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import { Segment, Form } from "semantic-ui-react";
 
-class SearchBar extends React.Component {
+class SearchBar extends Component {
 
     state = {
         title: "",
@@ -18,10 +18,17 @@ class SearchBar extends React.Component {
         this.setState({ [event.target.name]: event.target.value });
     }
 
+    handleSubmit = event => {
+        event.preventDefault();
+        // collect data and send search query to api
+        const searchOptions = this.state;
+        
+    }
+
     render() {
         return (
             <Segment>
-                <Form>
+                <Form onSubmit={this.handleSubmit}>
                     <Form.Group inline>
                         <Form.Input
                             value={this.state.title}

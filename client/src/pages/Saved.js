@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import { Grid } from "semantic-ui-react";
 import SearchResults from "../components/SearchResults/SearchResults"
 
-class Saved extends React.Component {
+class Saved extends Component {
 
     render() {
         return (

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import API from "../utils/API";
 
-class Detail extends React.Component {
+class Detail extends Component {
   state = {
     book: {}
   };

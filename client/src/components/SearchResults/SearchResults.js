@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import { Segment, Form } from "semantic-ui-react";
 
-class SearchResults extends React.Component {
+class SearchResults extends Component {
     state={
         term: "",
     }

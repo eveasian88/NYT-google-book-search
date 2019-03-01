@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import { Grid } from "semantic-ui-react";
 import SearchBar from "../components/SearchBar/SearchBar";
 
 
-class Search extends React.Component {
+class Search extends Component {
 
     render(){
         return(

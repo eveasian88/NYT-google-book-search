@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 // import axios from 'axios';
 import Saved from "./pages/Saved";
 import Search from "./pages/Search";
@@ -10,7 +10,7 @@ import { Grid } from "semantic-ui-react";
 // import Detail from "./pages/Detail";
 
 
-class App extends React.Component {
+class App extends Component {
 
   render() {
     return (

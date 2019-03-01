@@ -1,24 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
-import { Container, Segment, Grid, Form } from "semantic-ui-react";
-
-/**
- * COMPONENT PURPOSE
- * 
- * to act as the page layout and render components
- * in an arranged manner using the Semantic Grid.
- * 
- * This page should have a row on top with an input to serve 
- * the search bar so a user may search the api for books.
- * 
- * The bottom row should display the search results IF there are any.
- * 
- * FORM
- */
+import { Container, Segment, Grid } from "semantic-ui-react";
 
 
-class Books extends React.Component {
+class Books extends Component {
   state = {
     books: [],
     title: "",
