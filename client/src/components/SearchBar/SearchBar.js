@@ -4,7 +4,18 @@ import { Segment, Form } from "semantic-ui-react";
 class SearchBar extends React.Component {
 
     state = {
-        term: "",
+        title: "",
+        author: "",
+    }
+
+    // Add a class method to handle updating the value of state to match what the user types.
+    handleChange = event => {
+        // const field = event.target.name // title || author
+        // const newValue = event.target.value // Whatever the user is typing in
+
+        // this.setState({ [field]: newValue });
+
+        this.setState({ [event.target.name]: event.target.value });
     }
 
     render() {
@@ -15,7 +26,7 @@ class SearchBar extends React.Component {
                         <Form.Input
                             value={this.state.title}
                             onChange={this.handleInputChange}
-                            name="title"
+                            name="title"                    // This attribute is important as helps keep state in sync
                             placeholder="Title (required)"
                         />
                         <Form.Input
